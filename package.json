@@ -1,6 +1,6 @@
 {
   "name": "serverless-expressions-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Evaluates conditional and other expressions within serverless.yml",
   "main": "index.js",
   "scripts": {

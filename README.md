@@ -1,4 +1,4 @@
-# Serverless Version Info
+# Serverless Expressions Plugin
 
 This Serverless plugin evaluates and replaces expressions within `serverless.yml`.
 
