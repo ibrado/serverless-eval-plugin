@@ -1,0 +1,24 @@
+{
+  "name": "serverless-expressions-plugin",
+  "version": "0.1.0",
+  "description": "Evaluates conditional and other expressions within serverless.yml",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibrado/serverless-expressions-plugin.git"
+  },
+  "keywords": [
+    "serverless",
+    "sls",
+    "lambda",
+    "evaluate",
+    "conditional",
+    "expression"
+  ],
+  "author": "Alex Ibrado <alex@ibrado.org>",
+  "license": "ISC",
+  "dependencies": {}
+}
