@@ -33,7 +33,7 @@ custom:
 
 ```yaml
 custom:
-  serverless-version-info:
+  serverless-expressions-plugin:
     verbose: true
 
   test: "$`'5 minutes from now is $|(new Date((new Date()).getTime() + 300000))|'`"
