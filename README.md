@@ -1,20 +1,20 @@
-# Serverless Expressions Plugin
+# Serverless Eval Plugin
 
 This Serverless plugin evaluates and replaces expressions within `serverless.yml`.
 
 ## Install
 
 ```
-npm install --save-dev serverless-expressions-plugin
+npm install --save-dev serverless-eval-plugin
 ```
 
 ## Usage
 
-Add `serverless-expressions-plugin` to your `serverless.yml` plugin section:
+Add `serverless-eval-plugin` to your `serverless.yml` plugin section:
 
 ```yaml
 plugins:
-  - serverless-expressions-plugin
+  - serverless-eval-plugin
 ```
 
 ### Configuration
@@ -23,17 +23,17 @@ The only configurable option is for verbose output:
 
 ```yaml
 custom:
-  serverless-expressions-plugin:
+  serverless-eval-plugin:
     verbose: true     # (default: false) Print the resulting values during deploy
 ```
 
 `serverless-version-info` supports basic `eval()` support for expressions bounded by `` $`..` `` or `$|..|`.
 
-> NOTE: Nesting expressions using the same expression delimiters is currently not supported.
+> NOTE: Nesting eval()s using the same expression delimiters is currently not supported.
 
 ```yaml
 custom:
-  serverless-expressions-plugin:
+  serverless-eval-plugin:
     verbose: true
 
   test: "$`'5 minutes from now is $|(new Date((new Date()).getTime() + 300000))|'`"
@@ -49,9 +49,9 @@ provider:
 which results in:
 
 ```
-  Serverless: serverless-expressions-plugin set test to "5 minutes from now is Wed Sep 04 2019 18:29:46 GMT+0800 (PST)"
-  Serverless: serverless-expressions-plugin set profile to "testing-minimal"
-  Serverless: serverless-expressions-plugin set DEPLOY_TIME to "1567592686825"
+  Serverless: serverless-eval-plugin set test to "5 minutes from now is Wed Sep 04 2019 18:29:46 GMT+0800 (PST)"
+  Serverless: serverless-eval-plugin set profile to "testing-minimal"
+  Serverless: serverless-eval-plugin set DEPLOY_TIME to "1567592686825"
 ```
 
 ## See also
@@ -60,7 +60,7 @@ Generate deployed version info for your Lambdas with [serverless-version-info](h
 
 ## Contribute
 
-Please see the [Github repository](https://github.com/ibrado/serverless-expressions-plugin.git).
+Please see the [Github repository](https://github.com/ibrado/serverless-eval-plugin.git).
 
 
 

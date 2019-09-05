@@ -1,6 +1,8 @@
 'use strict';
 
-class ServerlessExpressionsPlugin {
+const PLUGIN_NAME = 'serverless-eval-plugin';
+
+class ServerlessEvalPlugin {
   constructor(serverless, options) {
     this.serverless = serverless;
     this.options = options;
@@ -33,7 +35,7 @@ class ServerlessExpressionsPlugin {
     } while(v.match(re));
 
     if(v !== val && this.config.verbose)
-      this.serverless.cli.log('serverless-expressions-plugin set '+prop+' to "'+v+'"');
+      this.serverless.cli.log(PLUGIN_NAME+' set '+prop+' to "'+v+'"');
     
     return v;
   }
@@ -62,7 +64,7 @@ class ServerlessExpressionsPlugin {
 
       let svc = this.serverless.service;
       let custom = svc.custom || {};
-      this.config = custom['serverless-expressions-plugin'] || {};
+      this.config = custom[PLUGIN_NAME] || {};
 
       for(const prop in svc) {
         if(prop === 'serverless') continue;
@@ -74,5 +76,5 @@ class ServerlessExpressionsPlugin {
   }
 }
 
-module.exports = ServerlessExpressionsPlugin;
+module.exports = ServerlessEvalPlugin;
 
