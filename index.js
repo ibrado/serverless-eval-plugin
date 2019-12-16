@@ -10,13 +10,17 @@ class ServerlessEvalPlugin {
     this.config = {};
 
     this.commands = {
+      'offline': {
+        lifecycleEvents: ['start']
+      },
       'deploy': {
         lifecycleEvents: ['functions']
       }
     };
 
     this.hooks = {
-      'before:deploy:functions': this.evaluateExpressions.bind(this)
+      'before:deploy:functions': this.evaluateExpressions.bind(this),
+      'before:offline:start:init': this.evaluateExpressions.bind(this)
     }
   }
 

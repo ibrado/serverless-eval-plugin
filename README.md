@@ -27,9 +27,9 @@ custom:
     verbose: true     # (default: false) Print the resulting values during deploy
 ```
 
-`serverless-version-info` supports basic `eval()` support for expressions bounded by `` $`..` `` or `$|..|`.
+`serverless-eval-plugin` supports basic `eval()` support for expressions bounded by `` $`..` `` or `$|..|`.
 
-> NOTE: Nesting eval()s using the same expression delimiters is currently not supported.
+> NOTE: Nesting `eval()`s using the same expression delimiters is currently not supported. Also, you may need to `eval()` inside a string.
 
 ```yaml
 custom:
