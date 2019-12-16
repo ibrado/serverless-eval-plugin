@@ -1,6 +1,6 @@
 {
   "name": "serverless-eval-plugin",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Evaluates conditional and other expressions within serverless.yml",
   "main": "index.js",
   "scripts": {
